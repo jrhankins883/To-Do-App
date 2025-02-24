@@ -7,13 +7,18 @@ const taskList = document.getElementById("taskList");
 addTaskButton.addEventListener("click", function () {
     // Step 3: Create a new list item
     const taskText = taskInput.value.trim(); // Get input value and remove extra spaces
+    if (taskText === "") return; // Prevent adding empty tasks
 
+    const taskItem = document.createElement("li") // Create list item
+    taskItem.textContent = taskText; // Set text content
 
-    if (taskText !== "") { // Ensure it's not empty
-        const newTask = document.createElement("li") // Create list item
-        newTask.textContent = taskText; // Set text content
-        taskList.appendChild(newTask) // Add to task list
+    const completeButton = document.createElement("button");
+    completeButton.textContent = "Complete";
+    completeButton.style.marginLeft = "10px";
 
-        taskInput.value = ""; // Clear input field
-    }
+    taskItem.appendChild(completeButton);
+    taskList.appendChild(taskItem) // Add to task list
+
+    taskInput.value = ""; // Clear input field
+    
 });

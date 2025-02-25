@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(to bottom, #8B0000, #000000, #4B0082); /* Dark red to black to purple */
+    color: white; /* Makes text readable */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;  /* Aligns input and button in one row */
+    gap: 10px;  /* Adds space between them */
+    justify-content: center;  /* Centers them */
+    margin-bottom: 20px;  /* Adds space below */
+}
+
+button {
+    background: darkred;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: purple;
+}
+
+#taskInput {
+    padding: 8px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Adds space between input and button */
+}
+
+#addTaskButton {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.task-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers the boxes */
+    gap: 20px; /* Adds space between the boxes */
+    width: 80%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.container {
+    flex: 1; /* Makes both sections take up equal space */
+    min-width: 300px; /* Prevents them from shrinking too much */
+}
+
+h1 {
+    font-size: 75px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
